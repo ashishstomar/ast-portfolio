@@ -1,25 +1,39 @@
 import { Link } from "react-router-dom";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 const Header = () => {
   return (
-    <nav className="flex gap-40  justify-around items-center px-9 py-6 bg-gray-300 ">
+    <nav className="flex gap-40  justify-around items-center px-9 py-6 bg-slate-300 ">
       <div>
         <h1 className="font-extrabold text-2xl ">ASHISH .K</h1>
       </div>
       <ul className="flex gap-5 font-bold text-xl">
         <li>
-          <Link to="/">Home</Link>{" "}
+          <AnchorLink offset={50} href="#home">
+            Home
+          </AnchorLink>
         </li>
         <li>
-          <Link to="projects">Projects</Link>
+          <AnchorLink offset={50} href="#about">
+            About
+          </AnchorLink>
         </li>
         <li>
-          <Link to="blog">Blog</Link>
+          <AnchorLink offset={50} href="#projects">
+            Projects
+          </AnchorLink>
         </li>
         <li>
-          <Link to="resume">Resume</Link>
+          <AnchorLink offset={50} href="#skills">
+            Skills
+          </AnchorLink>
         </li>
         <li>
-          <Link to="contact">Contact</Link>
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li>
+          <AnchorLink offset={50} href="#contact">
+            Contact
+          </AnchorLink>
         </li>
       </ul>
     </nav>
